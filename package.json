@@ -1,0 +1,61 @@
+{
+  "name": "@opuu/llms-txt",
+  "version": "0.1.0",
+  "description": "Elysia plugin to generate llms.txt from OpenAPI/Swagger specifications.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --format esm && bun run build:types",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "type-check": "tsc --noEmit",
+    "dev": "bun --watch src/index.ts",
+    "test": "./dev.sh test",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "bun run clean && bun run build"
+  },
+  "keywords": [
+    "elysia",
+    "openapi",
+    "swagger",
+    "markdown",
+    "llms",
+    "documentation",
+    "api",
+    "typescript"
+  ],
+  "author": "opuu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opuu/llms-txt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opuu/llms-txt/issues"
+  },
+  "homepage": "https://github.com/opuu/llms-txt#readme",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "elysia": "^1.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  }
+}
