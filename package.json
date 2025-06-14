@@ -22,7 +22,6 @@
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
     "type-check": "tsc --noEmit",
     "dev": "bun --watch src/index.ts",
-    "test": "./dev.sh test",
     "clean": "rm -rf dist",
     "prepublishOnly": "bun run clean && bun run build"
   },
@@ -32,11 +31,16 @@
     "swagger",
     "markdown",
     "llms",
+    "llms.txt",
+    "llms-full.txt",
+    "openapi-to-markdown",
+    "elysia-plugin",
+    "elysia-llms",
     "documentation",
     "api",
     "typescript"
   ],
-  "author": "opuu",
+  "author": "Obaydur Rahman <hello@opu.rocks>",
   "license": "MIT",
   "repository": {
     "type": "git",
