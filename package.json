@@ -18,12 +18,12 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target bun --format esm && bun run build:types",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build": "bun run clean && bun run build:js && bun run build:types",
+    "build:js": "bun build src/index.ts --outdir dist --target node --format esm",
+    "build:types": "tsc --emitDeclarationOnly",
     "type-check": "tsc --noEmit",
     "dev": "bun --watch src/index.ts",
-    "clean": "rm -rf dist",
-    "prepublishOnly": "bun run clean && bun run build"
+    "clean": "rm -rf dist"
   },
   "keywords": [
     "elysia",
