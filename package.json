@@ -1,6 +1,6 @@
 {
   "name": "@opuu/llms-txt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Elysia plugin to generate llms.txt from OpenAPI/Swagger specifications.",
   "main": "dist/index.js",
   "module": "dist/index.js",
